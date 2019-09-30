@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Table from "./Table";
 import WebsiteHeader from "./WebsiteHeader";
+import SearchBar from "./SearchBar";
+import BookGroup from "./BookGroup";
 import "../index.css";
+import "../styles/stylesheet.css";
 
 class App extends React.Component {
   render() {
@@ -25,10 +28,14 @@ class App extends React.Component {
     ];
 
     return (
-      <div className="container">
+      <div>
         <WebsiteHeader />
-        <Table characterData={characters} />
-        <WebsiteHeader />
+        <div className="container">
+          <SearchBar />
+          <BookGroup title="recommended" utilities="mb-5" />
+          <BookGroup title="exciting new reads" utilities="mb-5" />
+          <BookGroup title="bestsellers" utilities="mb-5" />
+        </div>
       </div>
     );
   }

@@ -1,9 +1,15 @@
-@import "variables";
-
 header {
+  border-bottom: 3px solid $audibleOrange;
+  margin-bottom: 15px;
+
   nav {
     background-color: $audibleDarkGrey;
-    color: green;
+    color: $audibleWhite;
+
+    ul {
+      margin-bottom: initial;
+    }
+
     li {
       list-style: none;
       display: inline-block;
@@ -11,6 +17,7 @@ header {
       a {
         padding: 6px 25px;
         color: $audibleOrange;
+        transition: 0.3s;
       }
     }
   }

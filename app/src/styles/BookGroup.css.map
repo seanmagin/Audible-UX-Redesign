@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,WADS,CACT,EAAE,CAAC;EACD,cAAc,EAAE,UAAU;EAC1B,WAAW,EAAE,GAAG;CACjB",
+    "sources": [
+        "BookGroup.scss"
+    ],
+    "names": [],
+    "file": "BookGroup.css"
+}
