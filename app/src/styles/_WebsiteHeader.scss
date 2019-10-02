@@ -2,6 +2,14 @@ header {
   border-bottom: 3px solid $audibleOrange;
   margin-bottom: 15px;
 
+  .navbar-brand {
+    img {
+      width: 100%;
+      max-width: 120px;
+      max-height: 30px;
+    }
+  }
+
   nav {
     background-color: $audibleDarkGrey;
     color: $audibleWhite;

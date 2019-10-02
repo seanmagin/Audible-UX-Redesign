@@ -2,14 +2,75 @@ import React, { Component } from "react";
 
 class BookItem extends Component {
   render() {
+    const catalogue = [
+      {
+        BookTitle: "Lord of the Rings: The Fellowship of the Ring",
+        Series: "The Lord of the Rings",
+        BookNumber: "1",
+        AuthorFirstName: "J.R.R",
+        AuthorLastName: "Tolkien",
+        Genre: "High Fantasy"
+      },
+      {
+        BookTitle: "Lord of the Rings: The Two Towers",
+        Series: "The Lord of the Rings",
+        BookNumber: "2",
+        AuthorFirstName: "J.R.R",
+        AuthorLastName: "Tolkien",
+        Genre: "High Fantasy"
+      },
+      {
+        BookTitle: "Lord of the Rings: The Return of the King",
+        Series: "The Lord of the Rings",
+        BookNumber: "3",
+        AuthorFirstName: "J.R.R",
+        AuthorLastName: "Tolkien",
+        Genre: "High Fantasy"
+      },
+      {
+        BookTitle: "Eragon",
+        Series: "Inheritance Cycle",
+        BookNumber: "1",
+        AuthorFirstName: "Christopher",
+        AuthorLastName: "Paolini",
+        Genre: "Fantasy"
+      },
+      {
+        BookTitle: "Eldest",
+        Series: "Inheritance Cycle",
+        BookNumber: "2",
+        AuthorFirstName: "Christopher",
+        AuthorLastName: "Paolini",
+        Genre: "Fantasy"
+      },
+      {
+        BookTitle: "Brisingr",
+        Series: "Inheritance Cycle",
+        BookNumber: "3",
+        AuthorFirstName: "Christopher",
+        AuthorLastName: "Paolini",
+        Genre: "Fantasy"
+      },
+      {
+        BookTitle: "Inheritance",
+        Series: "Inheritance Cycle",
+        BookNumber: "4",
+        AuthorFirstName: "Christopher",
+        AuthorLastName: "Paolini",
+        Genre: "Fantasy"
+      }
+    ];
+
     return (
-      <div className="card">
+      <div className="col-4 col-sm-2 book-single">
         <a href="#">
-          <img className="card-img-top" src="..." alt="card img" />
-          <div className="card-body">
-            <h5>Book Title</h5>
-            <p>Author Name</p>
-          </div>
+          <img
+            className="card-img-top"
+            src="/assets/book-placeholder.svg"
+            alt="card img"
+          />
+          <h5>Book Title</h5>
+          <p>Author Name</p>
         </a>
       </div>
     );
@@ -20,19 +81,15 @@ class BookGroup extends Component {
   render() {
     const items = [];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 12; i++) {
       items.push(<BookItem key={i} />);
     }
 
-    const GroupHeading = props => {
-      return { props };
-    };
-
     return (
       <div className={`row book-group ${this.props.utilities}`}>
-        <div class="col-sm-12">
-          <h3>{this.props.title}</h3>
-          <div className="card-deck">{items}</div>
+        <div className="col-sm-12">
+          <h3>{this.props.heading}</h3>
+          <div className="row">{items}</div>
         </div>
       </div>
     );

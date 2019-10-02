@@ -1,0 +1,35 @@
+.book-group {
+  h3 {
+    text-transform: capitalize;
+    font-weight: 300;
+  }
+  .book-single {
+    margin-bottom: 30px;
+
+    img {
+      box-shadow: 0px 4px 4px $black;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: $audibleWhite;
+      font-weight: 300 !important;
+      text-decoration: none;
+
+      &:hover {
+        color: $audibleOrange;
+        transition: all 0.3s;
+        img {
+          box-shadow: 0px 0px 8px $audibleOrange;
+          transition: all 0.3s;
+        }
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      max-width: calc(33.333333% - 12px);
+      margin: 6px;
+      padding: 0px;
+    }
+  }
+}

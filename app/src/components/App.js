@@ -32,9 +32,9 @@ class App extends React.Component {
         <WebsiteHeader />
         <div className="container">
           <SearchBar />
-          <BookGroup title="recommended" utilities="mb-5" />
-          <BookGroup title="exciting new reads" utilities="mb-5" />
-          <BookGroup title="bestsellers" utilities="mb-5" />
+          <BookGroup heading="Recommended" cat="recommended" utilities="mb-5" />
+          <BookGroup heading="Exciting new reads" cat="new" utilities="mb-5" />
+          <BookGroup heading="Bestsellers" cat="bestsellers" utilities="mb-5" />
         </div>
       </div>
     );
